@@ -19,3 +19,6 @@ jobs:
       - name: 'Testing Printing' 
       - run: echo esraa
 
+
+      - name: 'Printing Folder contents' 
+      - run: ls
