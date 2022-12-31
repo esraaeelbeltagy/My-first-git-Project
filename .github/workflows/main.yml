@@ -18,5 +18,10 @@ jobs:
        - name: "Login to Docker hub"
          run: docker login --username ${{ secrets.DOCKER_USEERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
 
+       - name: "Buliding docker image"
+         run: docker build -t ${{ secrets.DOCKER_USEERNAME }}\Myimage .
+
+       - name: "pushing to docker hub"
+         run: docker push ${{ secrets.DOCKER_USEERNAME }}\Myimage  
 
   
